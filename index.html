@@ -173,6 +173,21 @@
       </div>
       <div class="cmp" style="position: relative; height: 340px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14); --x: 50%;">
         <img src="exhibit-sar.jpg" alt="Sentinel-1 radar, Houston Ship Channel" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+        <svg viewBox="0 0 820 529" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;" aria-hidden="true">
+          <g fill="none" stroke="#3FE0A0" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <path d="M0 188 L110 184 L215 208 L330 200 L425 184 L525 148 L625 98 L725 52 L820 16" stroke-dasharray="10 7" opacity="0.9"/>
+            <path d="M0 222 L120 218 L235 246 L335 236 L430 218 L530 176 L630 124 L735 80 L820 50" stroke-dasharray="10 7" opacity="0.9"/>
+            <rect x="292" y="170" width="140" height="82" rx="3"/>
+            <rect x="432" y="26" width="178" height="132" rx="3"/>
+            <rect x="556" y="214" width="150" height="120" rx="3"/>
+          </g>
+          <g font-family="Outfit, system-ui, sans-serif" font-size="15" font-weight="500" letter-spacing="2" fill="#3FE0A0">
+            <rect x="14" y="236" width="170" height="26" fill="#0B1120" fill-opacity="0.78" rx="2"/><text x="24" y="255">SHIP CHANNEL</text>
+            <rect x="292" y="256" width="206" height="26" fill="#0B1120" fill-opacity="0.78" rx="2"/><text x="302" y="275">DOCKS AND BERTHS</text>
+            <rect x="432" y="162" width="236" height="26" fill="#0B1120" fill-opacity="0.78" rx="2"/><text x="442" y="181">PROCESSING PLANT</text>
+            <rect x="556" y="338" width="146" height="26" fill="#0B1120" fill-opacity="0.78" rx="2"/><text x="566" y="357">TANK FARM</text>
+          </g>
+        </svg>
         <div class="cmp-top" style="position: absolute; top: 0; bottom: 0; left: 0; width: var(--x); overflow: hidden;">
           <img src="exhibit-site.jpg" alt="Refinery and tank farm, Gulf Coast" style="position: absolute; top: 0; left: 0; width: 518px; height: 338px; object-fit: cover;">
         </div>
@@ -182,7 +197,7 @@
           <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 38px; height: 38px; border-radius: 50%; background: #F1F5F9; box-shadow: 0 4px 16px rgba(11,17,32,0.35); display: flex; align-items: center; justify-content: center; font-size: 12px; color: #0B1120;">&#8596;</div>
         </div>
         <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,0.88) 100%); pointer-events: none;">
-          <div style="font-size: 11px; color: #F1F5F9;">Drag to compare <span style="color: rgba(241,245,249,0.7);">&#183; photograph against radar of the same coordinates</span></div>
+          <div style="font-size: 11px; color: #F1F5F9;">Drag to compare <span style="color: rgba(241,245,249,0.7);">&#183; photograph against radar of the same site &#183; </span><span style="color: #3FE0A0;">green</span><span style="color: rgba(241,245,249,0.7);"> = what the analyst identified</span></div>
         </div>
         <input class="cmp-range" type="range" min="0" max="100" value="50" aria-label="Compare the photograph with the radar image" style="position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;">
       </div>
