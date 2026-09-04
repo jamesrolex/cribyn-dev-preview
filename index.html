@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=1440">
 <title>Cribyn — Corporate Intelligence</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap">
   <style>
@@ -44,10 +44,10 @@
       if (!e.target.classList || !e.target.classList.contains("cmp-range")) return;
       e.target.parentElement.style.setProperty("--x", e.target.value + "%");
     });
-  </script>
+  </script><script>if (matchMedia("(max-width: 700px)").matches && !/mobile/.test(location.search)) location.replace("mobile.html");</script>
 <style>
   html { background: #F9FAFC; }
-  body { margin: 0; display: flex; justify-content: center; }
+  body { margin: 0; display: flex; justify-content: safe center; }
   a { color: inherit; text-decoration: none; }
   /* the artboards are fixed-width by design; let a narrow window scroll rather than squash */
   .page { flex: none; }

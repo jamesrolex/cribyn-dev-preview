@@ -21,7 +21,7 @@
   </style>
 <style>
   html { background: #F9FAFC; }
-  body { margin: 0; display: flex; justify-content: center; }
+  body { margin: 0; display: flex; justify-content: safe center; }
   a { color: inherit; text-decoration: none; }
   /* the artboards are fixed-width by design; let a narrow window scroll rather than squash */
   .page { flex: none; }
@@ -35,7 +35,7 @@
   <!-- nav: wordmark and a menu control, nothing else fits honestly -->
   <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid rgba(11,17,32,0.08); background: #F9FAFC;">
     <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase;">CRIB<span style="color: #0D5F7D;">Y</span>N</div>
-    <div style="width: 44px; height: 44px; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 5px;">
+    <a href="index.html?mobile=0" style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #0D5F7D; padding: 12px 0;">Full site</a><div hidden style="width: 44px; height: 44px; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 5px;">
       <div style="width: 22px; height: 1px; background: #0B1120;"></div>
       <div style="width: 22px; height: 1px; background: #0B1120;"></div>
       <div style="width: 14px; height: 1px; background: #0B1120;"></div>
@@ -58,7 +58,7 @@
       </p>
       <div class="rise" style="margin-top: 30px; animation-delay: 0.4s;">
         <div style="background: #F1F5F9; color: #0B1120; padding: 15px 0; width: 100%; text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;">Discuss a mandate</div>
-        <div style="margin-top: 16px; font-size: 13px; letter-spacing: 0.04em; color: #F1F5F9; text-align: center;"><span style="border-bottom: 1px solid rgba(241,245,249,0.35); padding-bottom: 3px;">How we verify evidence</span></div>
+        <div style="margin-top: 16px; font-size: 13px; letter-spacing: 0.04em; color: #F1F5F9; text-align: center;"><span style="border-bottom: 1px solid rgba(241,245,249,0.35); padding-bottom: 3px;"><a href="verification.html">How we verify evidence</a></span></div>
       </div>
     </div>
   </div>
@@ -125,7 +125,7 @@
         <div style="font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(56,189,248,0.85);">What the satellite saw &#183; bright = built, dark = water</div>
       </div>
     </div>
-    <div style="margin-top: 18px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;">See how an exhibit is checked &#8594;</div>
+    <div style="margin-top: 18px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;"><a href="verification.html">See how an exhibit is checked &#8594;</a></div>
   </div>
 
   <!-- coverage, briefly -->
