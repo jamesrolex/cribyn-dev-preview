@@ -36,7 +36,15 @@
         stroke-dashoffset: 0 !important; transform: none !important; }
       .tally::after { content: '500'; }
     }
+    .cmp-range::-webkit-slider-thumb { width: 44px; height: 340px; }
+    .cmp-range::-moz-range-thumb { width: 44px; height: 340px; }
   </style>
+  <script>
+    document.addEventListener("input", function (e) {
+      if (!e.target.classList || !e.target.classList.contains("cmp-range")) return;
+      e.target.parentElement.style.setProperty("--x", e.target.value + "%");
+    });
+  </script>
 <style>
   html { background: #F9FAFC; }
   body { margin: 0; display: flex; justify-content: center; }
@@ -163,11 +171,21 @@
         </p>
         <div style="margin-top: 32px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;">See how an exhibit is checked &#8594;</div>
       </div>
-      <div style="position: relative; height: 340px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14);">
+      <div class="cmp" style="position: relative; height: 340px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14); --x: 50%;">
         <img src="exhibit-sar.jpg" alt="Sentinel-1 radar, Houston Ship Channel" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 20px; background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,0.85) 100%);">
-          <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(56,189,248,0.85);">What the satellite saw &#183; bright = buildings and ships, dark = water</div>
+        <div class="cmp-top" style="position: absolute; top: 0; bottom: 0; left: 0; width: var(--x); overflow: hidden;">
+          <img src="exhibit-site.jpg" alt="Refinery and tank farm, Gulf Coast" style="position: absolute; top: 0; left: 0; width: 518px; height: 338px; object-fit: cover;">
         </div>
+        <div style="position: absolute; top: 0; left: 0; padding: 9px 14px; background: rgba(255,255,255,0.92);"><div style="font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #4B5768;">What we were given</div></div>
+        <div style="position: absolute; top: 0; right: 0; padding: 9px 14px; background: rgba(11,17,32,0.82);"><div style="font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(241,245,249,0.7);">What the satellite saw</div></div>
+        <div style="position: absolute; top: 0; bottom: 0; left: var(--x); width: 2px; background: #F1F5F9; transform: translateX(-1px);">
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 38px; height: 38px; border-radius: 50%; background: #F1F5F9; box-shadow: 0 4px 16px rgba(11,17,32,0.35); display: flex; align-items: center; justify-content: center; font-size: 12px; color: #0B1120;">&#8596;</div>
+        </div>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,0.88) 100%); pointer-events: none;">
+          <div style="font-size: 11px; color: #F1F5F9;">Drag to compare <span style="color: rgba(241,245,249,0.7);">&#183; photograph against radar of the same coordinates</span></div>
+        </div>
+        <input class="cmp-range" type="range" min="0" max="100" value="50" aria-label="Compare the photograph with the radar image" style="position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;">
+      </div>
       </div>
     </div>
   </div>
