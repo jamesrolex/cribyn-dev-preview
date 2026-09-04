@@ -18,7 +18,15 @@
       .rise, .tally { animation: none !important; opacity: 1 !important; transform: none !important; }
       .tally::after { content: '500'; }
     }
+    .cmp-range::-webkit-slider-thumb { width: 44px; height: 230px; }
+    .cmp-range::-moz-range-thumb { width: 44px; height: 230px; }
   </style>
+  <script>
+    document.addEventListener("input", function (e) {
+      if (!e.target.classList || !e.target.classList.contains("cmp-range")) return;
+      e.target.parentElement.style.setProperty("--x", e.target.value + "%");
+    });
+  </script>
 <style>
   html { background: #F9FAFC; }
   body { margin: 0; display: flex; justify-content: safe center; }
@@ -119,11 +127,36 @@
     <p style="font-size: 15px; font-weight: 300; line-height: 1.8; color: #4B5768; margin: 18px 0 22px; text-wrap: pretty;">
       A convincing image of a real place can now be made in minutes. So every file entering a Cribyn case room is tested for its own origin, and location claims are put to independent satellite radar.
     </p>
-    <div style="position: relative; height: 200px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14);">
+    <div class="cmp" style="position: relative; height: 230px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14); --x: 50%; touch-action: none;">
       <img src="exhibit-sar.jpg" alt="Sentinel-1 radar, Houston Ship Channel" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 9px 16px; background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,0.85) 100%);">
-        <div style="font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(56,189,248,0.85);">What the satellite saw &#183; bright = built, dark = water</div>
+        <svg viewBox="0 0 820 529" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;" aria-hidden="true">
+          <g fill="none" stroke="#3FE0A0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M0 188 L110 184 L215 208 L330 200 L425 184 L525 148 L625 98 L725 52 L820 16" stroke-dasharray="12 8" opacity="0.9"/>
+            <path d="M0 222 L120 218 L235 246 L335 236 L430 218 L530 176 L630 124 L735 80 L820 50" stroke-dasharray="12 8" opacity="0.9"/>
+            <rect x="292" y="170" width="140" height="82" rx="3"/>
+            <rect x="432" y="26" width="178" height="132" rx="3"/>
+            <rect x="556" y="214" width="150" height="120" rx="3"/>
+          </g>
+          <g font-family="Outfit, system-ui, sans-serif" font-size="22" font-weight="500" letter-spacing="2" fill="#3FE0A0">
+            <rect x="14" y="232" width="230" height="34" fill="#0B1120" fill-opacity="0.78" rx="3"/><text x="26" y="257">SHIP CHANNEL</text>
+            <rect x="292" y="256" width="290" height="34" fill="#0B1120" fill-opacity="0.78" rx="3"/><text x="304" y="281">DOCKS AND BERTHS</text>
+            <rect x="432" y="160" width="300" height="34" fill="#0B1120" fill-opacity="0.78" rx="3"/><text x="444" y="185">PROCESSING PLANT</text>
+            <rect x="556" y="338" width="200" height="34" fill="#0B1120" fill-opacity="0.78" rx="3"/><text x="568" y="363">TANK FARM</text>
+          </g>
+        </svg>
+      <div class="cmp-top" style="position: absolute; top: 0; bottom: 0; left: 0; width: var(--x); overflow: hidden;">
+        <img src="exhibit-site.jpg" alt="Refinery and tank farm, Gulf Coast" style="position: absolute; top: 0; left: 0; width: 340px; height: 228px; object-fit: cover;">
       </div>
+      <div style="position: absolute; top: 0; left: 0; padding: 7px 10px; background: rgba(255,255,255,0.92);"><div style="font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: #4B5768;">What we were given</div></div>
+      <div style="position: absolute; top: 0; right: 0; padding: 7px 10px; background: rgba(11,17,32,0.82);"><div style="font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(241,245,249,0.7);">What the satellite saw</div></div>
+      <div style="position: absolute; top: 0; bottom: 0; left: var(--x); width: 2px; background: #F1F5F9; transform: translateX(-1px);">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 40px; height: 40px; border-radius: 50%; background: #F1F5F9; box-shadow: 0 4px 16px rgba(11,17,32,0.35); display: flex; align-items: center; justify-content: center; font-size: 13px; color: #0B1120;">&#8596;</div>
+      </div>
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 8px 10px; background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,0.88) 100%); pointer-events: none;">
+        <div style="font-size: 10px; color: #F1F5F9;">Drag to compare <span style="color: #3FE0A0;">&#183; green</span><span style="color: rgba(241,245,249,0.7);"> = what the analyst identified</span></div>
+      </div>
+      <input class="cmp-range" type="range" min="0" max="100" value="50" aria-label="Compare the photograph with the radar image" style="position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: none;">
+    </div>
     </div>
     <div style="margin-top: 18px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;"><a href="verification.html">See how an exhibit is checked &#8594;</a></div>
   </div>
