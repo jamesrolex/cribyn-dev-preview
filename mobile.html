@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cribyn — mobile</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #F9FAFC; }
+    @property --tally { syntax: '<integer>'; initial-value: 0; inherits: false; }
+    .tally { counter-reset: t var(--tally); animation: tally 2.4s cubic-bezier(0.16,1,0.3,1) forwards; }
+    .tally::after { content: counter(t); }
+    @keyframes tally { to { --tally: 500; } }
+    .rise { opacity: 0; transform: translateY(12px); animation: rise 0.8s cubic-bezier(0.16,1,0.3,1) forwards; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .tally { animation: none !important; opacity: 1 !important; transform: none !important; }
+      .tally::after { content: '500'; }
+    }
+  </style>
+<style>
+  html { background: #F9FAFC; }
+  body { margin: 0; display: flex; justify-content: center; }
+  a { color: inherit; text-decoration: none; }
+  /* the artboards are fixed-width by design; let a narrow window scroll rather than squash */
+  .page { flex: none; }
+</style>
+</head>
+<body>
+<div class="page">
+<!-- iPhone 14/15 width. 24px gutters throughout; nothing narrower than 44px is tappable. -->
+<div style="width: 390px; min-height: 2998px; background: #F9FAFC; font-family: 'Outfit', system-ui, sans-serif; color: #0B1120; overflow: hidden;">
+
+  <!-- nav: wordmark and a menu control, nothing else fits honestly -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid rgba(11,17,32,0.08); background: #F9FAFC;">
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase;">CRIB<span style="color: #0D5F7D;">Y</span>N</div>
+    <div style="width: 44px; height: 44px; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 5px;">
+      <div style="width: 22px; height: 1px; background: #0B1120;"></div>
+      <div style="width: 22px; height: 1px; background: #0B1120;"></div>
+      <div style="width: 14px; height: 1px; background: #0B1120;"></div>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="position: relative; height: 496px; overflow: hidden; background: #23272B;">
+    <img src="cribyn-hero.jpg" alt="Cribyn, Bannau Brycheiniog" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 42%;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,17,32,0.72) 0%, rgba(11,17,32,0.80) 55%, rgba(11,17,32,0.92) 100%);"></div>
+
+    <div style="position: relative; z-index: 2; padding: 44px 24px 0;">
+      <div class="rise" style="font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #38BDF8;">Corporate intelligence · London</div>
+      <div class="rise" style="width: 48px; height: 1px; background: rgba(56,189,248,0.6); margin: 16px 0 26px; animation-delay: 0.08s;"></div>
+      <h1 class="rise" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 300; line-height: 1.08; letter-spacing: -0.01em; margin: 0; color: #F1F5F9; animation-delay: 0.16s; text-wrap: pretty;">
+        It comes down to what you can prove.
+      </h1>
+      <p class="rise" style="font-size: 15px; font-weight: 300; line-height: 1.75; color: rgba(241,245,249,0.72); margin: 22px 0 0; animation-delay: 0.28s; text-wrap: pretty;">
+        We are instructed when a decision cannot be made on the papers alone — and every finding is graded, sourced and verified before it reaches you.
+      </p>
+      <div class="rise" style="margin-top: 30px; animation-delay: 0.4s;">
+        <div style="background: #F1F5F9; color: #0B1120; padding: 15px 0; width: 100%; text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;">Discuss a mandate</div>
+        <div style="margin-top: 16px; font-size: 13px; letter-spacing: 0.04em; color: #F1F5F9; text-align: center;"><span style="border-bottom: 1px solid rgba(241,245,249,0.35); padding-bottom: 3px;">How we verify evidence</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the four numbers, two up -->
+  <div style="background: #F9FAFC; border-bottom: 1px solid rgba(11,17,32,0.08);">
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div class="rise" style="padding: 22px 24px; border-right: 1px solid rgba(11,17,32,0.08); border-bottom: 1px solid rgba(11,17,32,0.08); animation-delay: 0.55s;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; line-height: 1;"><span class="tally"></span>+</div>
+        <div style="font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #7E8A9A; margin-top: 8px;">Taskable sources</div>
+      </div>
+      <div class="rise" style="padding: 22px 24px; border-bottom: 1px solid rgba(11,17,32,0.08); animation-delay: 0.62s;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; line-height: 1;">1:1</div>
+        <div style="font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #7E8A9A; margin-top: 8px;">Source to named handler</div>
+      </div>
+      <div class="rise" style="padding: 22px 24px; border-right: 1px solid rgba(11,17,32,0.08); animation-delay: 0.69s;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; line-height: 1;">A&#8211;F</div>
+        <div style="font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #7E8A9A; margin-top: 8px;">Graded on every finding</div>
+      </div>
+      <div class="rise" style="padding: 22px 24px; animation-delay: 0.76s;">
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 300; line-height: 1; color: #0D5F7D;">C2PA</div>
+        <div style="font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #7E8A9A; margin-top: 8px;">Provenance checked</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the name -->
+  <div style="padding: 24px; border-bottom: 1px solid rgba(11,17,32,0.08);">
+    <div style="font-size: 12px; font-weight: 300; line-height: 1.7; color: #7E8A9A;">
+      <span style="color: #0B1120;">Cribyn</span> is a summit in Bannau Brycheiniog, steep on three sides. You do not arrive at the top of it by accident, and the view is the whole reason you went.
+    </div>
+  </div>
+
+  <!-- three practices, stacked -->
+  <div style="background: #EDF1F7; padding: 40px 24px;">
+    <div style="border-top: 1px solid rgba(11,17,32,0.12); padding: 22px 0;">
+      <div style="font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #0D5F7D;">01</div>
+      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; margin-top: 10px;">Intelligence</div>
+      <p style="font-size: 14px; font-weight: 300; line-height: 1.8; color: #46536A; margin: 10px 0 0;">Diligence before you commit — counterparties, principals, beneficial ownership, sanctions exposure, and the political terrain around a deal.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(11,17,32,0.12); padding: 22px 0;">
+      <div style="font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #0D5F7D;">02</div>
+      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; margin-top: 10px;">Investigations</div>
+      <p style="font-size: 14px; font-weight: 300; line-height: 1.8; color: #46536A; margin: 10px 0 0;">Asset tracing, enforcement, fraud and internal enquiries — instructed by advisors and prepared to be relied upon.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(11,17,32,0.12); padding: 22px 0 0;">
+      <div style="font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #0D5F7D;">03</div>
+      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; margin-top: 10px;">Verification</div>
+      <p style="font-size: 14px; font-weight: 300; line-height: 1.8; color: #46536A; margin: 10px 0 0;">Provenance analysis on documents and imagery, corroborated against independent sensors. The part nobody else offers.</p>
+    </div>
+  </div>
+
+  <!-- the differentiator, briefly -->
+  <div style="padding: 46px 24px;">
+    <div style="font-size: 10px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: #0D5F7D;">Where we are different</div>
+    <div style="width: 48px; height: 1px; background: rgba(13,95,125,0.45); margin: 16px 0 22px;"></div>
+    <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; font-weight: 300; line-height: 1.16; margin: 0; text-wrap: pretty;">Anyone can assert a photograph is genuine.</h2>
+    <p style="font-size: 15px; font-weight: 300; line-height: 1.8; color: #4B5768; margin: 18px 0 22px; text-wrap: pretty;">
+      A convincing image of a real place can now be made in minutes. So every file entering a Cribyn case room is tested for its own origin, and location claims are put to independent satellite radar.
+    </p>
+    <div style="position: relative; height: 200px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14);">
+      <img src="exhibit-sar.jpg" alt="Sentinel-1 radar, Houston Ship Channel" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 9px 16px; background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,0.85) 100%);">
+        <div style="font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(56,189,248,0.85);">What the satellite saw &#183; bright = built, dark = water</div>
+      </div>
+    </div>
+    <div style="margin-top: 18px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;">See how an exhibit is checked &#8594;</div>
+  </div>
+
+  <!-- coverage, briefly -->
+  <div style="background: #E4EBF3; padding: 44px 24px;">
+    <div style="font-size: 10px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: #0D5F7D;">Coverage</div>
+    <div style="width: 48px; height: 1px; background: rgba(13,95,125,0.45); margin: 16px 0 20px;"></div>
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; font-weight: 300; line-height: 1.2;">Five regions, chosen because the public record there is thin.</div>
+    <div style="margin-top: 22px;">
+      <div style="font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E8A9A; margin-bottom: 14px;">Standing relationships</div>
+      <div style="border-top: 1px solid rgba(11,17,32,0.14); padding: 12px 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px;">Sub-Saharan Africa</div>
+      <div style="border-top: 1px solid rgba(11,17,32,0.14); padding: 12px 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px;">The former Soviet space</div>
+      <div style="border-top: 1px solid rgba(11,17,32,0.14); padding: 12px 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px;">The Balkans</div>
+      <div style="border-top: 1px solid rgba(11,17,32,0.14); padding: 12px 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px;">The Gulf</div>
+      <div style="border-top: 1px solid rgba(11,17,32,0.14); border-bottom: 1px solid rgba(11,17,32,0.14); padding: 12px 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px;">Southeast Asia</div>
+      <div style="font-size: 12px; font-weight: 300; line-height: 1.7; color: #7E8A9A; margin-top: 16px;">We take mandates elsewhere and say plainly what we are starting from.</div>
+    </div>
+
+  <!-- footer -->
+  <div style="background: #0B1120; color: #F9FAFC; padding: 40px 24px;">
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; letter-spacing: 0.16em; text-transform: uppercase;">CRIB<span style="color: #38BDF8;">Y</span>N</div>
+    <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(251,250,247,0.4); margin-top: 14px;">Clarity where the stakes are highest</div>
+    <div style="height: 1px; background: rgba(251,250,247,0.12); margin: 26px 0;"></div>
+    <div style="font-size: 13px;">Cribyn LLP</div>
+    <div style="font-size: 13px; font-weight: 300; color: rgba(251,250,247,0.6); margin-top: 10px; line-height: 1.8;">[Address line one]<br>London [postcode]<br>[contact@cribyn.com]<br>[+44 (0)20 XXXX XXXX]</div>
+    <div style="font-size: 10px; font-weight: 300; color: rgba(251,250,247,0.3); margin-top: 22px; line-height: 1.6;">Contains modified Copernicus Sentinel data 2026</div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
