@@ -49,7 +49,6 @@
   html { background: #F9FAFC; }
   body { margin: 0; display: flex; justify-content: safe center; }
   a { color: inherit; text-decoration: none; }
-  /* the artboards are fixed-width by design; let a narrow window scroll rather than squash */
   .page { flex: none; }
 </style>
 </head>
@@ -59,13 +58,10 @@
 
   <!-- nav -->
   <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 84px; border-bottom: 1px solid rgba(11,17,32,0.08); background: #F9FAFC;">
-    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #0B1120;">CRIB<span style="color: #0D5F7D;">Y</span>N</div>
+    <a href="index.html"><div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: #0B1120;">CRIB<span style="color: #0D5F7D;">Y</span>N</div></a>
     <div style="display: flex; gap: 30px; align-items: center;">
       <a href="intelligence.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Intelligence</span></a>
-      <a href="services.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Services</span></a>
-      <a href="verification.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Verification</span></a>
-      <a href="sources.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Sources</span></a>
-      <a href="sectors.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Sectors</span></a>
+      <a href="sources.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Sources &amp; sectors</span></a>
       <a href="our-people.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Our people</span></a>
       <a href="cards.html"><span style="font-size: 12px; letter-spacing: 0.03em; color: #5B6678;">Cards</span></a>
       <a href="mailto:contact@cribyn.com"><span style="border: 1px solid rgba(13,95,125,0.4); color: #0D5F7D; padding: 9px 20px; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-left: 6px;">Contact</span></a>
@@ -95,8 +91,8 @@
         We are instructed when a decision cannot be made on the papers alone. Senior relationships in the jurisdictions that matter, a network of more than five hundred we can task — and every finding graded, sourced and verified before it reaches you.
       </p>
       <div class="rise" style="display: flex; gap: 24px; margin-top: 44px; align-items: center; animation-delay: 0.4s;">
-        <span style="background: #F1F5F9; color: #0B1120; padding: 16px 34px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;">Discuss a mandate</span>
-        <span style="font-size: 13px; letter-spacing: 0.04em; color: #F1F5F9; border-bottom: 1px solid rgba(241,245,249,0.35); padding-bottom: 3px;">How we verify evidence</span>
+        <a href="our-people.html"><span style="background: #F1F5F9; color: #0B1120; padding: 16px 34px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;">Discuss a mandate</span></a>
+        <a href="intelligence.html#verification"><span style="font-size: 13px; letter-spacing: 0.04em; color: #F1F5F9; border-bottom: 1px solid rgba(241,245,249,0.35); padding-bottom: 3px;">How we verify evidence</span></a>
       </div>
     </div>
   </div>
@@ -126,7 +122,7 @@
   <!-- the name, quietly -->
   <div style="background: #F9FAFC; padding: 34px 84px; border-bottom: 1px solid rgba(11,17,32,0.08);">
     <div style="max-width: 1180px; font-size: 13px; font-weight: 300; line-height: 1.7; color: #7E8A9A;">
-      <span style="color: #0B1120;">Cribyn</span> is a summit in Bannau Brycheiniog, between Pen y Fan and Fan y Bîg — steep on three sides. You do not arrive at the top of it by accident, and the view is the whole reason you went.
+      <span style="color: #0B1120;">Cribyn</span> is a summit in Bannau Brycheiniog, between Pen y Fan and Fan y Bîg — steep on three sides. You do not arrive at the summit by accident, and it&rsquo;s the commanding, far-reaching view that is the reason for the journey.
     </div>
   </div>
 
@@ -169,7 +165,7 @@
         <p style="font-size: 17px; font-weight: 300; line-height: 1.85; color: #4B5768; max-width: 540px; margin: 24px 0 0; text-wrap: pretty;">
           A convincing image of a real place can now be made in minutes. So every file entering a Cribyn case room is tested for what it says about its own origin — and where it claims a location, independent satellite radar is asked whether anything is there.
         </p>
-        <div style="margin-top: 32px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;">See how an exhibit is checked &#8594;</div>
+        <a href="intelligence.html#verification"><div style="margin-top: 32px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D;">See how an exhibit is checked &#8594;</div></a>
       </div>
       <div class="cmp" style="touch-action: none; position: relative; height: 340px; overflow: hidden; background: #0B1120; border: 1px solid rgba(11,17,32,0.14); --x: 50%;">
         <img src="exhibit-sar.jpg" alt="Sentinel-1 radar, Houston Ship Channel" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
@@ -216,7 +212,7 @@
         <div class="rise" style="font-size: 15px; font-weight: 300; line-height: 1.85; color: #4B5768; margin-top: 22px; max-width: 460px; animation-delay: 0.4s;">
           Standing relationships where a filing tells you least and a person tells you most. Elsewhere, we say plainly what we are starting from.
         </div>
-        <div class="rise" style="margin-top: 26px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D; animation-delay: 0.5s;">How sources are held &#8594;</div>
+        <a href="sources.html"><div class="rise" style="margin-top: 26px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #0D5F7D; animation-delay: 0.5s;">How sources are held &#8594;</div></a>
       </div>
       <div>
         <div style="font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #7E8A9A; margin-bottom: 20px;">Standing relationships</div>
@@ -225,7 +221,7 @@
           <div style="font-size: 12px; font-weight: 300; color: #7E8A9A; text-align: right; max-width: 290px; line-height: 1.6;">Extractives licensing and concession politics</div>
         </div>
         <div class="rise" style="border-top: 1px solid rgba(11,17,32,0.14); padding: 15px 0; display: flex; justify-content: space-between; gap: 20px; animation-delay: 0.65s;">
-          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400;">The former Soviet space</div>
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400;">The former Soviet republics</div>
           <div style="font-size: 12px; font-weight: 300; color: #7E8A9A; text-align: right; max-width: 290px; line-height: 1.6;">Sanctions exposure and routed ownership</div>
         </div>
         <div class="rise" style="border-top: 1px solid rgba(11,17,32,0.14); padding: 15px 0; display: flex; justify-content: space-between; gap: 20px; animation-delay: 0.8s;">
@@ -233,11 +229,11 @@
           <div style="font-size: 12px; font-weight: 300; color: #7E8A9A; text-align: right; max-width: 290px; line-height: 1.6;">Privatisation histories and procurement disputes</div>
         </div>
         <div class="rise" style="border-top: 1px solid rgba(11,17,32,0.14); padding: 15px 0; display: flex; justify-content: space-between; gap: 20px; animation-delay: 0.95s;">
-          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400;">The Gulf</div>
-          <div style="font-size: 12px; font-weight: 300; color: #7E8A9A; text-align: right; max-width: 290px; line-height: 1.6;">Family holdings and undisclosed control</div>
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400;">The Middle East</div>
+          <div style="font-size: 12px; font-weight: 300; color: #7E8A9A; text-align: right; max-width: 290px; line-height: 1.6;">Family holdings and undisclosed control, Gulf to Turkey</div>
         </div>
         <div class="rise" style="border-top: 1px solid rgba(11,17,32,0.14); border-bottom: 1px solid rgba(11,17,32,0.14); padding: 15px 0; display: flex; justify-content: space-between; gap: 20px; animation-delay: 1.1s;">
-          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400;">Southeast Asia</div>
+          <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400;">South and Southeast Asia</div>
           <div style="font-size: 12px; font-weight: 300; color: #7E8A9A; text-align: right; max-width: 290px; line-height: 1.6;">Supply-chain provenance and diversion risk</div>
         </div>
         <div class="rise" style="font-size: 13px; font-weight: 300; line-height: 1.7; color: #7E8A9A; margin-top: 20px; animation-delay: 1.25s;">
